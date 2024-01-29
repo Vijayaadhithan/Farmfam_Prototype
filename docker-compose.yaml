@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  preprocess:
+    build: .
+    depends_on:
+      - mysql
+      - superset
+
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: CI_CD
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+  superset:
+    image: superset/superset:latest
+    volumes:
+      - ./superset/config.py:/etc/superset/config.py
+      - superset-data:/app/superset/data
+    ports:
+      - "8080:8080"
+    environment:
+      - SUPERSET_CONFIG_DIR=/etc/superset
+
+volumes:
+  mysql-data:
+  superset-data:

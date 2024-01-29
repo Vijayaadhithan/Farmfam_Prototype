@@ -1,0 +1,4 @@
+pandas>=1.3.0
+numpy>=1.19.0
+matplotlib>=3.3.4
+MySQL-connector-python>=8.0.11
