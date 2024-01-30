@@ -18,7 +18,7 @@ db_config = {
     'host': '127.0.0.1',
     'database': 'CI_CD',
     'user': 'root',
-    'password': 'Vijay2799#',
+    'password': '#######',
 }
 
 # Create a connection using the 'with' statement
