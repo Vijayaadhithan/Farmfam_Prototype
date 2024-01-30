@@ -29,24 +29,24 @@ Make sure you have the following software installed on your machine:
 ## Getting Started
 
 1. **Clone the repository:**
-   git clone https://github.com/Vijayaadhithan/Farmfam_Prototype.git
-   cd Farmfam_Prototype
-2. **Build the Docker Images:**
+   1. git clone https://github.com/Vijayaadhithan/Farmfam_Prototype.git
+   2. cd Farmfam_Prototype
+3. **Build the Docker Images:**
    docker-compose build
-3. **Start the Containers:**
+4. **Start the Containers:**
    docker-compose up -d
-4. **Access Superset:** Open a web browser and go to http://localhost:8080. Use the following credentials to log in:
+5. **Access Superset:** Open a web browser and go to http://localhost:8080. Use the following credentials to log in:
       - Username: admin
       - Password: admin
-5. **Create a Database or Connect to the existing Database:** Create a database in Superset that corresponds to the data you want to visualize or Configure Superset by creating a new                                                                 database connection to your MySQL instance
-6. **Create a Table:**
+6. **Create a Database or Connect to the existing Database:** Create a database in Superset that corresponds to the data you want to visualize or Configure Superset by creating a new                                                                 database connection to your MySQL instance
+7. **Create a Table:**
    1. In the Superset interface, navigate to the "Databases" section.
    2. Click on the "+" button to create a new database connection.
    3. use this name in developement environment "host.docker.internal"
    4. Enter the database connection details for your MySQL database.
    5. Click the "Save" button to create the database connection.
 
-7. **Create a New Table from Input Data:**
+8. **Create a New Table from Input Data:**
    1. In the Superset interface, navigate to the "Datasets" section.
    2. Click on the "+" button to create a new dataset.
    3. Select the "MySQL" data source.
@@ -54,7 +54,7 @@ Make sure you have the following software installed on your machine:
    5. In the "Query" tab, enter the SQL query to select the data from the input file.
    6. Click the "Save" button to create the dataset.
 
-8. **Create Visualizations:**
+9. **Create Visualizations:**
    1. In the Superset interface, navigate to the "Dashboards" section.
    2. Click on the "+" button to create a new dashboard.
    3. Drag and drop the dataset you created in step 7 onto the dashboard.
