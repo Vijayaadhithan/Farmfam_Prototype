@@ -42,8 +42,9 @@ Make sure you have the following software installed on your machine:
 6. **Create a Table:**
    1. In the Superset interface, navigate to the "Databases" section.
    2. Click on the "+" button to create a new database connection.
-   3. Enter the database connection details for your MySQL database.
-   4. Click the "Save" button to create the database connection.
+   3. use this name in developement environment "host.docker.internal"
+   4. Enter the database connection details for your MySQL database.
+   5. Click the "Save" button to create the database connection.
 
 7. **Create a New Table from Input Data:**
    1. In the Superset interface, navigate to the "Datasets" section.
