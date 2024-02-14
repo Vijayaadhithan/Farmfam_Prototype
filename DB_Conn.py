@@ -18,7 +18,7 @@ db_config = {
     'host': '127.0.0.1',
     'database': 'CI_CD',
     'user': 'root',
-    'password': '#######',
+    'password': 'Vijay2799#',
 }
 
 # Create a connection using the 'with' statement
@@ -33,6 +33,13 @@ try:
                 'datetime64[ns]': 'DATETIME',
                 # Add more data types as needed
             }
+            # Loop through each sheet
+            for sheet_name, sheet_data in sheets.items():
+                # Convert datetime columns
+                for column in sheet_data.columns:
+                    if pd.api.types.is_datetime64_any_dtype(sheet_data[column]):
+                        sheet_data[column] = sheet_data[column].dt.strftime('%Y-%m-%d %H:%M:%S')
+
 
             # Extract column names and their data types from the DataFrame
             column_definitions = ', '.join([f'{column} {mysql_data_type_mapping[str(transformed_data[column].dtype)]}' for column in transformed_data.columns])
